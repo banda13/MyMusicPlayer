@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="100dp"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/primary_text"
+    >
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/myicon2"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/played_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/prev_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_keyboard_arrow_left_36dp"
+                android:background="@color/primary_text"
+                style="@android:style/MediaButton.Previous"
+                android:clickable="true"/>
+
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/play_btn"
+                android:src="@drawable/ic_play_arrow_black_24dp"
+                android:background="@color/primary_text"
+                android:clickable="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+                android:id="@+id/next_btn"
+                android:background="@color/primary_text"
+                android:clickable="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

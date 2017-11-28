@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.andy.mymusicplayer">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".application.MyMusicPlayerApplication"
+        android:allowBackup="true"
+        android:grantUriPermissions="true"
+        android:icon="@drawable/myicon2"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.ListActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.MusicActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".musicplayer.NotfificationHelper" />
+
+        <receiver
+            android:name=".broadcast_reciver.myReciver"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.HEADSET_PLUG" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.SearchActivity" />
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:label="@string/title_activity_settings">
+
+            <action android:name="android.media.MediaPlayer" />
+
+        </activity>
+
+        <meta-data
+            android:name="DATABASE"
+            android:value="mymusicplayer.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="2" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="com.example.andy.mymusicplayer" />
+
+    </application>
+
+</manifest>

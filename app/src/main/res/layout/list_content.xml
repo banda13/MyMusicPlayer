@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/music_element"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/list_element"
+    android:orientation="horizontal">
+
+
+    <ImageView
+        android:id="@+id/sound_img"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:background="@drawable/list_element"
+        android:foregroundGravity="center" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_element">
+
+        <TextView
+            android:id="@+id/sound_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/list_element"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/sound_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/sound_name"
+            android:background="@drawable/list_element"
+            android:gravity="bottom"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+</LinearLayout>

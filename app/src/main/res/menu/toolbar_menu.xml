@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/Search"
+        android:icon="@drawable/ic_action_search"
+        android:title="@string/search"
+        app:showAsAction="ifRoom"></item>
+
+    <item
+        android:id="@+id/MainMenu"
+        android:icon="@drawable/ic_apps"
+        android:title="@string/menu"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/DeleteTmp"
+                android:icon="@drawable/ic_delete"
+                android:title="@string/deletenexts"
+                app:showAsAction="ifRoom"></item>
+            <item
+                android:id="@+id/Refresh"
+                android:icon="@drawable/ic_refresh"
+                android:title="@string/Refresh"
+                app:showAsAction="ifRoom"></item>
+            <item
+                android:id="@+id/About"
+                android:icon="@drawable/ic_info_black_24dp"
+                android:title="@string/about"
+                app:showAsAction="ifRoom"></item>
+            <item
+                android:id="@+id/Settings"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/settings"
+                app:showAsAction="ifRoom"></item>
+        </menu>
+    </item>
+</menu>

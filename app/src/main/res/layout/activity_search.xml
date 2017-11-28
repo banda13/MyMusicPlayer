@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/List_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.SearchActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_search"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/music_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_the_title_here"
+                android:imeOptions="actionSearch"
+                android:id="@+id/etName" />
+        </android.support.design.widget.TextInputLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <include layout="@layout/music_list" />
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

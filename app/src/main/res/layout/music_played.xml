@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/music_played_linear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:contex=".Music_Played_Fragment">
+
+
+    <TextView
+        android:id="@+id/sound_name"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <SeekBar
+        android:id="@+id/duration_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:background="@color/divider"/>
+
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:id="@+id/imageView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/timerDisplay"
+        android:layout_above="@id/duration_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- Current Duration Label -->
+        <TextView
+            android:id="@+id/CurrentDuration"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"/>
+        <!-- Total Duration Label -->
+        <TextView
+            android:id="@+id/TotalDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"/>
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linearLayout">
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/left_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_arrow_left_36dp"
+            android:background="@color/primary_text"
+            android:clickable="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/replay_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_replay_36dp"
+            android:clickable="true"
+            android:background="@color/primary_text"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/play_button"
+            android:layout_toStartOf="@+id/play_button" />
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/play_button"
+            android:src="@drawable/ic_play_arrow_black_24dp"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:background="@color/primary_text"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"/>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/shuffle_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_shuffle_black_24dp"
+            android:clickable="true"
+            android:background="@color/primary_text"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/play_button"
+            android:layout_toEndOf="@+id/play_button" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+            android:id="@+id/right_button"
+            android:background="@color/primary_text"
+            android:clickable="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
